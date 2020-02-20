@@ -20,7 +20,17 @@
 // isVowel(99) --> false
 // isVowel({e: 'Elephant'}) --> false
 
+function isVowel (character) {
 
+    let vowel = ['a', 'e', 'i', 'o' , 'u']
+
+    for (let i = 0; i < vowel.length; i++) {
+        if () {
+            return true
+        } else {return false}
+    }
+
+    }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write two functions: "isEven" and "isOdd" that take a number argument and
