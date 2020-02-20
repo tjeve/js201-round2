@@ -10,6 +10,16 @@
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
 
+function tipAmount (billAmount, service) {
+
+    let level = {
+        good: .20,
+        fair: .15,
+        poor: .10
+    }
+
+    return billAmount * level[service]
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,6 +31,16 @@
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
 
+function totalAmount (billAmount, service) {
+
+    let level = {
+        good: .20,
+        fair: .15,
+        poor: .10
+    }
+
+    return billAmount + (billAmount * level[service])
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,3 +51,14 @@
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+
+function splitAmount (billAmount, service, groupNumber) {
+
+    let level = {
+        good: .20,
+        fair: .15,
+        poor: .10
+    }
+
+    return (billAmount + (billAmount * level[service])) / groupNumber
+}
