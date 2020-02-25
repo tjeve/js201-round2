@@ -22,13 +22,13 @@
 
 function isVowel (character) {
 
-    let vowel = ['a', 'e', 'i', 'o' , 'u']
+    if (typeof character !== "string") return false
+    if (character.length !== 1) return false
 
-    for (let i = 0; i < vowel.length; i++) {
-        if () {
-            return true
-        } else {return false}
-    }
+    const vowels = ['a', 'e', 'i', 'o' , 'u']
+    const lowerCaseChar = character.toLowerCase()
+    // the .includes() method returns a boolean statement.
+    return vowels.includes(lowerCaseChar)
 
     }
 
