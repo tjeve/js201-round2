@@ -129,10 +129,9 @@ let capitals = {
     Wyoming: 'Cheyenne'
 };
 
-// functon isCapitalCity (state, city) {
-//     if (city === capitals[state]) { 
-//         return true
-//     } else return false
+function isCapitalCity (state, city) {
 
-// }
-
+    if (city === capitals[state]) {
+        return true
+    } else return false
+}
