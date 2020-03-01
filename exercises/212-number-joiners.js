@@ -5,7 +5,19 @@
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
 
+function numberJoinerWhile (start, end) {
+    let string = ''
+    let idx = start
+    while ( idx < end ) {
+        string += idx
+        string += '_'
+        console.log(string)
+        if (
+        idx++
+    }
+}
 
+numberJoinerWhile(1, 5)
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
