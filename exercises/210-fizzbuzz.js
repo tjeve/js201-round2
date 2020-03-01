@@ -18,16 +18,16 @@ function fizzbuzz (num) {
   
       if (i % 3 === 0 & i % 5 !== 0) {
         string += "fizz"
-        console.log(i, string)
+        // console.log(i, string)
       } else if (i % 5 === 0 & i % 3 !== 0) {
         string += "buzz"
-        console.log(i, string)
+        // console.log(i, string)
       } else if (i % 3 !== 0 | num % 5 !== 0) {
         string += "."
-        console.log(i, string)
+        // console.log(i, string)
       } else if (i % 3 === 0 & i % 5 === 0) {
         string += "fizzbuzz"
-        console.log(i, string)
+        // console.log(i, string)
       }
     }
       

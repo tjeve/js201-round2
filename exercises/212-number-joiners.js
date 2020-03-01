@@ -8,13 +8,13 @@
 function numberJoinerWhile (start, end) {
     let string = ''
     let idx = start
-    while ( idx < end ) {
+    while ( idx < end + 1 ) {
         string += idx
         string += '_'
-        console.log(string)
-        if (
+        // console.log(idx, string)
         idx++
     }
+    return string.slice(0, string.length - 1)
 }
 
 numberJoinerWhile(1, 5)
