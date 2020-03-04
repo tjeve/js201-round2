@@ -41,3 +41,14 @@ function numberJoinerFor (start, end) {
 // numberJoinerFancy(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
+
+ function numberJoinerFancy (start, end, separator = '_') {
+    let string = ''
+    if (typeof start === 'number' & typeof end === 'number' & typeof separator === 'string') {
+        for (let idx = start; idx <= end; idx++) {
+            string += idx
+            string += separator
+        }
+        return string.slice(0, string.length - separator.length)
+    }
+ }
