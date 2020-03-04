@@ -23,6 +23,14 @@ numberJoinerWhile(1, 5)
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
 // except using a "for" loop internally.
 
+function numberJoinerFor (start, end) {
+    let string = ''
+    for (let idx = start; idx < end; idx++) {
+        string += idx
+        string += '_'
+    }
+    return string.slice(0, string.length - 1)
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
