@@ -25,7 +25,7 @@ numberJoinerWhile(1, 5)
 
 function numberJoinerFor (start, end) {
     let string = ''
-    for (let idx = start; idx < end; idx++) {
+    for (let idx = start; idx <= end; idx++) {
         string += idx
         string += '_'
     }
