@@ -9,14 +9,20 @@ function removeZAnimals () {
   let animalsWithoutZ = []
 
   // 2) loop through "animals"
-
+for (let idx = 0; idx < animals.length; idx++) {
+  if (animals[idx].search('z') === -1) {
+    animalsWithoutZ.push(animals[idx])
+  }
+}
   // 3) add every item in "animals" to "animalsWithoutZ" unless the animal name
   //    contains the letter "z"
   //    HINT: remember you can search within a string
 
   // 4) return "animalsWithoutZ"
-
+return animalsWithoutZ
 }
+
+removeZAnimals()
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "removeAnyWordWithZ" that takes 1 argument: an array of strings
