@@ -57,3 +57,18 @@ function removeAnyWordWithZ (array) {
 // Examples:
 // removeWordsWithChar(['aaa', 'bbb', 'ccc'], 'b') --> ['aaa', 'ccc']
 // removeWordsWithChar(['pizza', 'beer', 'cheese'], 'E') --> ['pizza']
+function removeWordsWithChar (array, character) {
+  if (character.length === 1 ) {
+
+      let accumulator = []
+
+    for (let idx = 0; idx < array.length; idx++) {
+      if (array[idx].toLowerCase().search(character.toLowerCase()) === -1) {
+        accumulator.push(array[idx])
+      }
+    }
+    return accumulator
+    }
+}
+
+// removeWordsWithChar (["pizza", "toast", "eggs"], "z")
