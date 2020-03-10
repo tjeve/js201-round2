@@ -7,7 +7,13 @@
 //
 // Example:
 // reverse("skoob") --> "books"
-
+function reverse (string) {
+    let newString = ''
+    for (let idx = string.length; idx >= 0; idx--) {
+        newString += string.charAt(idx)
+    }
+    return newString
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -17,8 +23,22 @@
 //
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
-
-
+function findLongestWord (string) {
+    let array = string.split(' ')
+    let longestWord = ''
+    for (let idx = 0; idx < array.length; idx++) {
+      console.log("current word:", array[idx])
+      let currentWord = array[idx]
+      if ( currentWord.length > longestWord.length) {
+        console.log("longest word:", longestWord)
+        longestWord = currentWord
+      }
+    }
+    return longestWord
+  }
+  
+  findLongestWord("I went to a chinese restaurant")
+    
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "nicer"
