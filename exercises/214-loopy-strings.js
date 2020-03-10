@@ -27,10 +27,10 @@ function findLongestWord (string) {
     let array = string.split(' ')
     let longestWord = ''
     for (let idx = 0; idx < array.length; idx++) {
-      console.log("current word:", array[idx])
+
       let currentWord = array[idx]
       if ( currentWord.length > longestWord.length) {
-        console.log("longest word:", longestWord)
+          
         longestWord = currentWord
       }
     }
@@ -66,7 +66,6 @@ function nicer (string) {
     const newString = newArray.join(' ')
     return newString
 }
-nicer ('Wait a darn minute here, this is a crappy school')
 
 
 
@@ -79,7 +78,12 @@ nicer ('Wait a darn minute here, this is a crappy school')
 // Examples:
 // capitalizeAll('hello world') --> 'Hello World'
 // capitalizeAll('every day is like sunday') --> 'Every Day Is Like Sunday'
+function capitalizeAll (string) {
+    const array = string.split(' ')
+    for (let idx = 0; idx < array.length; idx++) {
 
+    }
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
