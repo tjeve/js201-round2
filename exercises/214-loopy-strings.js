@@ -48,9 +48,29 @@ function findLongestWord (string) {
 // Example:
 // nicer('mom get the heck in here and bring me a darn sandwich.')
 // > 'mom get the in here and bring me a sandwich.'
+function nicer (string) {
+    let badWords = {
+      "heck": "heck", 
+      "darn": "darn", 
+      "dang": "dang", 
+      "crappy": "crappy"
+      }
+    let array = string.split(' ')
+    let newArray = []
+    for (let idx = 0; idx < array.length; idx++) {
+      const currentWord = array[idx]
+      if (currentWord !== badWords[currentWord]) {
+        newArray.push(currentWord)
+      }
+    }
+    const newString = newArray.join(' ')
+    return newString
+}
+nicer ('Wait a darn minute here, this is a crappy school')
 
 
 
+ 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "capitalizeAll"
 // It should take as input a sentence and capitalize the first letter
