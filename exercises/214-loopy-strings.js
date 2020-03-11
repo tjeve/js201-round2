@@ -30,7 +30,7 @@ function findLongestWord (string) {
 
       let currentWord = array[idx]
       if ( currentWord.length > longestWord.length) {
-          
+
         longestWord = currentWord
       }
     }
@@ -80,9 +80,16 @@ function nicer (string) {
 // capitalizeAll('every day is like sunday') --> 'Every Day Is Like Sunday'
 function capitalizeAll (string) {
     const array = string.split(' ')
+    const newArray = []
     for (let idx = 0; idx < array.length; idx++) {
-
+      let currentWord = array[idx]
+      const capFirstLetter = currentWord.charAt(0).toUpperCase()
+      const restOfWord = currentWord.slice(1, currentWord.length)
+      let capWord = capFirstLetter.concat(restOfWord)
+      newArray.push(capWord)
     }
+    const newString = newArray.join(' ')
+    return newString
 }
 
 
