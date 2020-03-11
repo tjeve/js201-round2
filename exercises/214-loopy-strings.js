@@ -105,10 +105,15 @@ function capitalizeAll (string) {
 // split('xyz', 'r') --> ['xyz']
 
 function split (string, delimiter) {
-
-    let accumulator = []
+  
+    const accumulator = []
     for (let idx = 0; idx < string.length; idx++) {
-
+        console.log(string[idx])
+        const char = string[idx]
+        if (char === delimiter.charAt(0)) {
+          
+        }
     }
     return null
 }
+split("I want this sentence to be split")
