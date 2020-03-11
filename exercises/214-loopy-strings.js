@@ -103,3 +103,12 @@ function capitalizeAll (string) {
 // split('a-b-c', '-') --> ['a', 'b', 'c']
 // split('APPLExxBANANAxxCHERRY', 'xx') --> ['APPLE', 'BANANA', 'CHERRY']
 // split('xyz', 'r') --> ['xyz']
+
+function split (string, delimiter) {
+
+    let accumulator = []
+    for (let idx = 0; idx < string.length; idx++) {
+
+    }
+    return null
+}
