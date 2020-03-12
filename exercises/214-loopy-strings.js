@@ -111,9 +111,14 @@ function split (string, delimiter) {
         console.log(string[idx])
         const char = string[idx]
         if (char === delimiter.charAt(0)) {
+            for (let idx2 = 0; idx2 < delimiter.length; idx2++)
           
         }
     }
     return null
 }
-split("I want this sentence to be split")
+// split("I want this sentence to be split")
+
+// loop through each character in the string looking for the first letter of the delimiter
+// when the first letter is found search the next characters for the length of the delimiter
+// slice out the delimter if all characters are present
