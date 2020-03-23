@@ -124,4 +124,5 @@ function split (string, delimiter) {
 // loop through each character in the string looking for the first letter of the delimiter
 // when the first letter is found search the next characters for the length of the delimiter
 // slice out the delimter if all characters are present
+// push the remaining to the accumulator
 // return the accumulator
