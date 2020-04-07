@@ -1,6 +1,8 @@
 // Write a function "max" that takes an array of numbers returns the highest
 // number in the array.
+function max (array) {
 
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
