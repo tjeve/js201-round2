@@ -70,5 +70,6 @@ function removeWordsWithChar (array, character) {
     return accumulator
     }
 }
+// does this work?
 
 // removeWordsWithChar (["pizza", "toast", "eggs"], "z")
