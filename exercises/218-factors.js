@@ -6,7 +6,13 @@
 // gcd(5, 1) --> 1
 // gcd(3, 15) --> 3
 // gcd(50, 20) --> 10
-
+function gcd (a, b) {
+    if (!b) {
+        return a;
+    }
+    
+    return gcd(b, a % b);
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -18,4 +24,27 @@
 // factors(1) --> [1]
 // factors(12) --> [1, 2, 3, 4, 6, 12]
 // factors(42) --> [1, 2, 3, 6, 7, 14, 21, 42]
+
+// function factors (x) {
+//     factors = []
+
+//     for (let i = x; i > 0; i--) {
+//         if (x % i === 0) {
+//             //Adds items to the front of an array
+//             factors.unshift(i)
+//             console.log(factors)
+//         }
+//     }
+//     return factors
+// }
+
+function factors (x) {
+    factors = []
+    for (let i = 0; i <= x; i++) {
+        if (x % i === 0) {
+            factors.push(i)
+        }
+    }
+    return factors
+}
 

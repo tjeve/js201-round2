@@ -9,6 +9,31 @@
 // S => 5
 // T => 7
 //
+function leetspeak (str) {
+    let strArr = str.split('')
+    let leet = []
+
+    let convtable = {
+        A: 4,
+        E: 3,
+        G: 6,
+        I: 1,
+        O: 0,
+        S: 5,
+        T: 7,
+    }
+
+    strArr.forEach(char => {
+        if (Object.keys(convtable).includes(char.toUpperCase())) {
+            leet.push(convtable[char.toUpperCase()])
+        } else {
+            leet.push(char.toLowerCase())
+        }
+    })
+    return leet.join('')
+}
+
+
 // HINT: What is the best data structure to represent the substitutions?
 //
 // Examples:
