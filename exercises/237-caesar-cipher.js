@@ -13,37 +13,36 @@ function cipher (str, shift) {
     let letters = alphabet.split('')
     let strArr = str.split('')
     let codedArr = []
-
-    /*
-        1. Iterate through the string passed into cipher
-        2. for each char, loop through the letters array to
-          find a match.
-        3. When match found, return the index of that letter
-        4. Then add the shift to the index of the letters array,
-          making sure that it loops back on itself after 'z'.
-        5. Push that letter to the coded Arr
-      */
-
-    for (let i = 0; i < str.length; i++) {
-        //char comes from strArr, but shiftedChar should come from letters
-        let char = strArr[i].toLowerCase()
-        console.log('char: ', char)
-        let shiftedChar
-        console.log('shiftedChar: ', shiftedChar)
-
-        letters.forEach((letter, idx) => {
-            if (char === letter) {
-                shiftedChar = strArr[idx + shift]
-            }
-        })
-
-        let char = strArr[i].toLowerCase()
-        console.log('char: ', char)
-        let shiftedChar = ''
-        console.log('shiftedChar: ', shiftedChar)
-
-        return codedArr.join('')
+    
+    //function for resetting the alphabet index
+    let idxLoop = (idx, shift) => {
+      let sum = idx + shift
+      if(sum > 25) {
+        return sum -= 26
+      } else {
+        return sum
+      }  
     }
+    
+    //iterate through the string
+    for(let i = 0; i < strArr.length; i++) {
+      //defines the current char in the array
+      let char = strArr[i].toLowerCase()
+      console.log('char: ', char)
+      let idxOfCharInLetters = letters.indexOf(char)
+      console.log('idxOfCharInLetters: ', idxOfCharInLetters)
+      let shiftedLetter = letters[idxLoop(idxOfCharInLetters, shift)]
+      console.log('shiftedLetter: ', shiftedLetter)
+      
+      idxOfCharInLetters >= 0 ? codedArr.push(shiftedLetter) : codedArr.push(char)
+     
+      console.log('Return: ', codedArr.join(''))
+      console.log('...................')
+    }
+    
+    return codedArr.join('')
+}
+
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,3 +54,38 @@ function cipher (str, shift) {
 // 'attack at dawn!'
 // > decipher('ehz czlod otgpcrpo ty l hzzo', 11)
 // 'two roads diverged in a wood'
+
+function decipher (str, shift) {
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    let letters = alphabet.split('')
+    let strArr = str.split('')
+    let codedArr = []
+    
+    //function for resetting the alphabet index
+    let idxLoop = (idx, shift) => {
+        let difference = idx - shift
+        if(difference < 0) {
+          return difference += 26
+        } else {
+          return difference
+        }  
+      }
+    
+    //iterate through the string
+    for(let i = 0; i < strArr.length; i++) {
+      //defines the current char in the array
+      let char = strArr[i].toLowerCase()
+      console.log('char: ', char)
+      let idxOfCharInLetters = letters.indexOf(char)
+      console.log('idxOfCharInLetters: ', idxOfCharInLetters)
+      let shiftedLetter = letters[idxLoop(idxOfCharInLetters, shift)]
+      console.log('shiftedLetter: ', shiftedLetter)
+      
+      idxOfCharInLetters >= 0 ? codedArr.push(shiftedLetter) : codedArr.push(char)
+     
+      console.log('Return: ', codedArr.join(''))
+      console.log('...................')
+    }
+    
+    return codedArr.join('')
+}
