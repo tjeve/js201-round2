@@ -8,9 +8,35 @@
 // *****
 // *****
 
-function makeSquare() {
+function makeSquare(size) {
+    let star = '*'
+    let newLine = '/n'
+    let line = []
+    let lineStr
+    let square = []
+    let squareStr
     
+    for(let i = 0; i < size*size; i++) {
+      line.push(star)
+      if(line.length === size + 1) {
+        line.push('\n')
+        lineStr = line.join('')
+      }
+      
+    }
+    for(let j = 0; j < size; j++) {
+        square.push(lineStr)
+        if(square.length === size) {
+          console.log(square.join(''))
+          let squareStr = square.join('')
+        }
+      }
+    
+    return squareStr
+
 }
+
+makeSquare(5)
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBox" which is given a width and height and returns a
